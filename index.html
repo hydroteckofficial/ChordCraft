@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chord & Melody Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="logo">
+            <i class="fas fa-music"></i> ChordCrafter
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Generate Chords and Melodies for Different Genres</h1>
+
+        <!-- Genre and Key Selection -->
+        <div class="inputs">
+            <label for="genre">Select Genre:</label>
+            <select id="genre">
+                <option value="pop">Pop</option>
+                <option value="jazz">Jazz</option>
+                <option value="blues">Blues</option>
+                <option value="rock">Rock</option>
+                <option value="house">House</option>
+                <option value="edm">EDM</option>
+                <option value="ambient">Ambient</option>
+            </select>
+
+            <label for="key">Select Key:</label>
+            <select id="key">
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+                <option value="F">F</option>
+                <option value="G">G</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+            </select>
+
+            <button id="generate-btn">Generate</button>
+        </div>
+    </div>
+
+    <!-- Popup Modal -->
+    <div id="popup-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h2>Your Text File is Ready</h2>
+            <p id="chords-display">Chord Progression: (not generated yet)</p>
+            <p id="melody-display">Melody Notes: (not generated yet)</p>
+            <a id="download-midi" class="download-button" href="#" download="generated-music.txt" style="display: none;">Download Text File</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 ChordCrafter Generator. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
